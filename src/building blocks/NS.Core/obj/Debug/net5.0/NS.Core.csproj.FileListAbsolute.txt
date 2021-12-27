@@ -1,0 +1,11 @@
+D:\Projetos\NerdStore\src\building blocks\NS.Core\bin\Debug\net5.0\NS.Core.deps.json
+D:\Projetos\NerdStore\src\building blocks\NS.Core\bin\Debug\net5.0\NS.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.Core\bin\Debug\net5.0\ref\NS.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.Core\bin\Debug\net5.0\NS.Core.pdb
+D:\Projetos\NerdStore\src\building blocks\NS.Core\obj\Debug\net5.0\NS.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\NerdStore\src\building blocks\NS.Core\obj\Debug\net5.0\NS.Core.AssemblyInfoInputs.cache
+D:\Projetos\NerdStore\src\building blocks\NS.Core\obj\Debug\net5.0\NS.Core.AssemblyInfo.cs
+D:\Projetos\NerdStore\src\building blocks\NS.Core\obj\Debug\net5.0\NS.Core.csproj.CoreCompileInputs.cache
+D:\Projetos\NerdStore\src\building blocks\NS.Core\obj\Debug\net5.0\NS.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.Core\obj\Debug\net5.0\ref\NS.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.Core\obj\Debug\net5.0\NS.Core.pdb

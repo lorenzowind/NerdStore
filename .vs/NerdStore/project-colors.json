@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b6bd4ca4-4161-489a-a3a4-5081537d3e47": {
+      "ProjectGuid": "b6bd4ca4-4161-489a-a3a4-5081537d3e47",
+      "DisplayName": "NS.Identity.API",
+      "ColorIndex": 0
+    },
+    "1bdde343-8dd1-4fef-9c19-8885277fc515": {
+      "ProjectGuid": "1bdde343-8dd1-4fef-9c19-8885277fc515",
+      "DisplayName": "NS.Core",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

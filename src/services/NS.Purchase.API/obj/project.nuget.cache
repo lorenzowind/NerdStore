@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "ika+mschUcHAhXFf44QXgifrkcevaW3HKok6Be+OckANBXIRQS64U+oJ726HTouvObt0LzyU6vTnMNKGfOdE/g==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Purchase.API\\NS.Purchase.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
