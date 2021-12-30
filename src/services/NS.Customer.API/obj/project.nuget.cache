@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l0Flho0ry9M65wjN3hNpvtSWVU652CyXIvb6KDNbeLKx64hazcUfnkYlNnK1Q4JxDAC2RGtEFmSxDqWbKCeeAQ==",
+  "dgSpecHash": "t3CtRNAbfloo8YtbSm6fxRI7jIqpFX4winYiDhHNMaZ1hHH6RNRNHQ/D4Vsdcqtgg/Ay73hM2F/oFB0DRgbsUQ==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Client.API\\NS.Customer.API.csproj",
+  "projectFilePath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Customer.API\\NS.Customer.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

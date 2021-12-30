@@ -7517,11 +7517,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\services\\NS.Client.API\\NS.Customer.API.csproj",
+      "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\services\\NS.Customer.API\\NS.Customer.API.csproj",
       "projectName": "NS.Customer.API",
-      "projectPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Client.API\\NS.Customer.API.csproj",
+      "projectPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Customer.API\\NS.Customer.API.csproj",
       "packagesPath": "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Client.API\\obj\\",
+      "outputPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Customer.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
