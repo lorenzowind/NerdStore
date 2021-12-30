@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VSmHCZbXjlf69H5w9xx2unNg+IzB+CbXMdUYixgu+tygXH9zuHlqQJTzPGq+XX11XYvXfZ568sbKbp16uD58lg==",
+  "dgSpecHash": "/3dfKgr7xoVWc4sraySuS8GaPx7BIdhHQHROg/dqIYq/nT6RM3ajcz7Msyll2s4XJkM9L48cJapWXccs1uWhmg==",
   "success": true,
   "projectFilePath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Identity.API\\NS.Identity.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
     "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.13\\microsoft.aspnetcore.cryptography.internal.5.0.13.nupkg.sha512",

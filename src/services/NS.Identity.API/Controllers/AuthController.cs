@@ -9,12 +9,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using NS.Identity.API.Extensions;
 using NS.Identity.API.Models;
+using NS.WebAPI.Core.Controllers;
+using NS.WebAPI.Core.Identity;
 
 namespace NS.Identity.API.Controllers
 {
-    [ApiController]
     [Route("api/identity")]
     public class AuthController : MainController
     {

@@ -4,14 +4,14 @@
     "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\NS.Catalog.API.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\NS.Catalog.API.csproj": {
+    "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\NS.Catalog.API.csproj",
-        "projectName": "NS.Catalog.API",
-        "projectPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\NS.Catalog.API.csproj",
+        "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj",
+        "projectName": "NS.Core",
+        "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj",
         "packagesPath": "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\obj\\",
+        "outputPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,169 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.6, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj",
+        "projectName": "NS.WebAPI.Core",
+        "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj",
+        "packagesPath": "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lorenzo Windmoller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.6, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\NS.Catalog.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\NS.Catalog.API.csproj",
+        "projectName": "NS.Catalog.API",
+        "projectPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\NS.Catalog.API.csproj",
+        "packagesPath": "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Catalog.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lorenzo Windmoller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj": {
+                "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj"
+              },
+              "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj": {
+                "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.14.0, )"

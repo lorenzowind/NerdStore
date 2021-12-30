@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Vo/Qpnrpp0sXxitLDLCLbnAPSBvpeEArvdqOTvH9FMZzPePbfQ+mTlYaAlYIo0yTB/eKLPW+2F4yFa9ZiLZ6fA==",
+  "dgSpecHash": "iSL6s+WDvBdgt8OWgWLxi7UA/Y9cHq8+9B8+NLozWoGxuZ3Ez7W4NpRppxpDaWQkIFYqV6eYEYPddxgWC/mgcQ==",
   "success": true,
   "projectFilePath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -8,6 +8,7 @@ D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.Identity.
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.Identity.API.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\ref\NS.Identity.API.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.Identity.API.pdb
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Humanizer.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -17,6 +18,7 @@ D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.As
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
@@ -66,5 +68,6 @@ D:\Projetos\NerdStore\src\services\NS.Identity.API\obj\Debug\net5.0\NS.Identity.
 D:\Projetos\NerdStore\src\services\NS.Identity.API\obj\Debug\net5.0\ref\NS.Identity.API.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\obj\Debug\net5.0\NS.Identity.API.pdb
 D:\Projetos\NerdStore\src\services\NS.Identity.API\obj\Debug\net5.0\NS.Identity.API.genruntimeconfig.cache
-D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Humanizer.dll
-D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.WebAPI.Core.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.WebAPI.Core.pdb
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\FluentValidation.dll

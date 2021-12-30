@@ -1,0 +1,12 @@
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\bin\Debug\net5.0\NS.WebAPI.Core.deps.json
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\bin\Debug\net5.0\NS.WebAPI.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\bin\Debug\net5.0\ref\NS.WebAPI.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\bin\Debug\net5.0\NS.WebAPI.Core.pdb
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.csproj.AssemblyReference.cache
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.AssemblyInfoInputs.cache
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.AssemblyInfo.cs
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.csproj.CoreCompileInputs.cache
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\ref\NS.WebAPI.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.pdb

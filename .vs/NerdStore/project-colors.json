@@ -10,7 +10,27 @@
       "ProjectGuid": "1bdde343-8dd1-4fef-9c19-8885277fc515",
       "DisplayName": "NS.Core",
       "ColorIndex": 1
+    },
+    "0b686191-dadc-43e3-98f3-967d4c81be40": {
+      "ProjectGuid": "0b686191-dadc-43e3-98f3-967d4c81be40",
+      "DisplayName": "NS.WebApp.MVC",
+      "ColorIndex": 2
+    },
+    "7ec5bced-0399-4c7c-ae4f-bdd0d12674d7": {
+      "ProjectGuid": "7ec5bced-0399-4c7c-ae4f-bdd0d12674d7",
+      "DisplayName": "NS.Catalog.API",
+      "ColorIndex": 3
+    },
+    "96b86f95-5989-4e88-b6f3-017ab2565742": {
+      "ProjectGuid": "96b86f95-5989-4e88-b6f3-017ab2565742",
+      "DisplayName": "NS.WebAPI.Core",
+      "ColorIndex": 4
+    },
+    "20c14438-8f49-4df7-a49e-76ff3e946d0a": {
+      "ProjectGuid": "20c14438-8f49-4df7-a49e-76ff3e946d0a",
+      "DisplayName": "NS.Customer.API",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 6
 }
