@@ -13,7 +13,7 @@ namespace NS.WebAPI.Core.Controllers
 
         protected ActionResult CustomResponse(object result = null)
         {
-            if (OperationValidate())
+            if (IsValidOperation())
             {
                 return Ok(result);
             }
@@ -46,7 +46,7 @@ namespace NS.WebAPI.Core.Controllers
             return CustomResponse();
         }
 
-        protected bool OperationValidate() => !Errors.Any();
+        protected bool IsValidOperation() => !Errors.Any();
 
         protected void AddProcessingError(string error) => Errors.Add(error);
 
