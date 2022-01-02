@@ -1,0 +1,15 @@
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\bin\Debug\net5.0\NS.MessageBus.deps.json
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\bin\Debug\net5.0\NS.MessageBus.dll
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\bin\Debug\net5.0\ref\NS.MessageBus.dll
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\bin\Debug\net5.0\NS.MessageBus.pdb
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\bin\Debug\net5.0\NS.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\bin\Debug\net5.0\NS.Core.pdb
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.csproj.AssemblyReference.cache
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.AssemblyInfoInputs.cache
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.AssemblyInfo.cs
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.csproj.CoreCompileInputs.cache
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.csproj.CopyComplete
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.dll
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\ref\NS.MessageBus.dll
+D:\Projetos\NerdStore\src\building blocks\NS.MessageBus\obj\Debug\net5.0\NS.MessageBus.pdb

@@ -282,3 +282,12 @@ D:\Projetos\NerdStore\src\services\NS.Customer.API\obj\Debug\net5.0\NS.Customer.
 D:\Projetos\NerdStore\src\services\NS.Customer.API\obj\Debug\net5.0\ref\NS.Customer.API.dll
 D:\Projetos\NerdStore\src\services\NS.Customer.API\obj\Debug\net5.0\NS.Customer.API.pdb
 D:\Projetos\NerdStore\src\services\NS.Customer.API\obj\Debug\net5.0\NS.Customer.API.genruntimeconfig.cache
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\EasyNetQ.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\RabbitMQ.Client.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Polly.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\NS.MessageBus.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\NS.MessageBus.pdb

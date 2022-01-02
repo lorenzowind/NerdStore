@@ -6,6 +6,12 @@ namespace NS.Identity.API.Models
     public class UserRegistration
     {
         [Required(ErrorMessage = "Property {0} is required")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Property {0} is required")]
+        public string Cpf { get; set; }
+
+        [Required(ErrorMessage = "Property {0} is required")]
         [EmailAddress(ErrorMessage = "Property {0} is not well-formatted")]
         public string Email { get; set; }
 

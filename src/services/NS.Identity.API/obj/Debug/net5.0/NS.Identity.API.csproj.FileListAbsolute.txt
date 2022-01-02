@@ -71,3 +71,16 @@ D:\Projetos\NerdStore\src\services\NS.Identity.API\obj\Debug\net5.0\NS.Identity.
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.WebAPI.Core.dll
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.WebAPI.Core.pdb
 D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\FluentValidation.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\EasyNetQ.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\MediatR.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\RabbitMQ.Client.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.Core.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.Core.pdb
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\Polly.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.MessageBus.dll
+D:\Projetos\NerdStore\src\services\NS.Identity.API\bin\Debug\net5.0\NS.MessageBus.pdb

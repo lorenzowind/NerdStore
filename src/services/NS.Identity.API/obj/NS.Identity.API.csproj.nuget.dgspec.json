@@ -4,6 +4,152 @@
     "D:\\Projetos\\NerdStore\\src\\services\\NS.Identity.API\\NS.Identity.API.csproj": {}
   },
   "projects": {
+    "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj",
+        "projectName": "NS.Core",
+        "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj",
+        "packagesPath": "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lorenzo Windmoller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.6, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.MessageBus\\NS.MessageBus.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.MessageBus\\NS.MessageBus.csproj",
+        "projectName": "NS.MessageBus",
+        "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.MessageBus\\NS.MessageBus.csproj",
+        "packagesPath": "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.MessageBus\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lorenzo Windmoller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj": {
+                "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "EasyNetQ": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -98,6 +244,12 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj": {
+                "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.Core\\NS.Core.csproj"
+              },
+              "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.MessageBus\\NS.MessageBus.csproj": {
+                "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.MessageBus\\NS.MessageBus.csproj"
+              },
               "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj": {
                 "projectPath": "D:\\Projetos\\NerdStore\\src\\building blocks\\NS.WebAPI.Core\\NS.WebAPI.Core.csproj"
               }
