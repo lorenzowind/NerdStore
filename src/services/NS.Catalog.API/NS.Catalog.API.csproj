@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\building blocks\NS.Core\NS.Core.csproj" />
+    <ProjectReference Include="..\..\building blocks\NS.MessageBus\NS.MessageBus.csproj" />
     <ProjectReference Include="..\..\building blocks\NS.WebAPI.Core\NS.WebAPI.Core.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,12 @@
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\bin\Debug\net5.0\NS.Purchase.NPay.deps.json
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\bin\Debug\net5.0\NS.Purchase.NPay.dll
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\bin\Debug\net5.0\ref\NS.Purchase.NPay.dll
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\bin\Debug\net5.0\NS.Purchase.NPay.pdb
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\NS.Purchase.NPay.csproj.AssemblyReference.cache
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\NS.Purchase.NPay.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\NS.Purchase.NPay.AssemblyInfoInputs.cache
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\NS.Purchase.NPay.AssemblyInfo.cs
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\NS.Purchase.NPay.csproj.CoreCompileInputs.cache
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\NS.Purchase.NPay.dll
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\ref\NS.Purchase.NPay.dll
+D:\Projetos\NerdStore\src\services\NS.Purchase.NPay\obj\Debug\net5.0\NS.Purchase.NPay.pdb

@@ -19,7 +19,7 @@ namespace NS.Cart.API.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("NS.Cart.API.Model.CartItem", b =>
+            modelBuilder.Entity("NS.Cart.API.Models.CartItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,14 +50,20 @@ namespace NS.Cart.API.Migrations
                     b.ToTable("CartItens");
                 });
 
-            modelBuilder.Entity("NS.Cart.API.Model.CustomerCart", b =>
+            modelBuilder.Entity("NS.Cart.API.Models.CustomerCart", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("AppliedVoucher")
+                        .HasColumnType("bit");
+
                     b.Property<Guid>("CustomerId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("decimal(18,2)");
@@ -70,17 +76,52 @@ namespace NS.Cart.API.Migrations
                     b.ToTable("CustomerCarts");
                 });
 
-            modelBuilder.Entity("NS.Cart.API.Model.CartItem", b =>
+            modelBuilder.Entity("NS.Cart.API.Models.CartItem", b =>
                 {
-                    b.HasOne("NS.Cart.API.Model.CustomerCart", "CustomerCart")
+                    b.HasOne("NS.Cart.API.Models.CustomerCart", "CustomerCart")
                         .WithMany("Itens")
                         .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("CustomerCart");
                 });
 
-            modelBuilder.Entity("NS.Cart.API.Model.CustomerCart", b =>
+            modelBuilder.Entity("NS.Cart.API.Models.CustomerCart", b =>
+                {
+                    b.OwnsOne("NS.Cart.API.Models.Voucher", "Voucher", b1 =>
+                        {
+                            b1.Property<Guid>("CustomerCartId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("Code")
+                                .HasColumnType("varchar(50)")
+                                .HasColumnName("VoucherCode");
+
+                            b1.Property<int>("DiscountType")
+                                .HasColumnType("int")
+                                .HasColumnName("DiscountType");
+
+                            b1.Property<decimal?>("DiscountValue")
+                                .HasColumnType("decimal(18,2)")
+                                .HasColumnName("DiscountValue");
+
+                            b1.Property<decimal?>("Percentage")
+                                .HasColumnType("decimal(18,2)")
+                                .HasColumnName("Percentage");
+
+                            b1.HasKey("CustomerCartId");
+
+                            b1.ToTable("CustomerCarts");
+
+                            b1.WithOwner()
+                                .HasForeignKey("CustomerCartId");
+                        });
+
+                    b.Navigation("Voucher");
+                });
+
+            modelBuilder.Entity("NS.Cart.API.Models.CustomerCart", b =>
                 {
                     b.Navigation("Itens");
                 });

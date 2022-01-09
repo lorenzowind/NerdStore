@@ -3,13 +3,12 @@ using NS.Catalog.API.Models;
 using NS.Core.Data;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace NS.Catalog.API.Data.Repository
 {
-#pragma warning disable S3881 // "IDisposable" should be implemented correctly
     public class ProductRepository : IProductRepository
-#pragma warning restore S3881 // "IDisposable" should be implemented correctly
     {
         private readonly CatalogContext _context;
 
@@ -28,10 +27,26 @@ namespace NS.Catalog.API.Data.Repository
         {
             return await _context.Products.FindAsync(id);
         }
+        public async Task<List<Product>> GetProductsById(string ids)
+        {
+            var idsGuid = ids.Split(",")
+                .Select(id => (Ok: Guid.TryParse(id, out var x), Value: x));
+
+            if (!idsGuid.All(nid => nid.Ok)) return new List<Product>();
+
+            var idsValue = idsGuid.Select(id => id.Value);
+
+            return await _context.Products.AsNoTracking()
+                .Where(p => idsValue.Contains(p.Id) && p.Active).ToListAsync();
+        }
 
         public void Add(Product product)
         {
             _context.Products.Add(product);
+        }
+        public void Update(Product product)
+        {
+            _context.Products.Update(product);
         }
         public void Save(Product product)
         {

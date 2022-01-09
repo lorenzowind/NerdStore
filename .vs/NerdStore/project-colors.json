@@ -50,7 +50,62 @@
       "ProjectGuid": "4ccec635-7d9c-4f1b-ba02-fad84e6f09e3",
       "DisplayName": "NS.MessageBus",
       "ColorIndex": 8
+    },
+    "9a0ad8be-6506-4470-9ab2-57d1aae002f6": {
+      "ProjectGuid": "9a0ad8be-6506-4470-9ab2-57d1aae002f6",
+      "DisplayName": "NS.Cart.API",
+      "ColorIndex": 9
+    },
+    "8b8204e1-c896-4b7d-8a41-6d35b3a46a2e": {
+      "ProjectGuid": "8b8204e1-c896-4b7d-8a41-6d35b3a46a2e",
+      "DisplayName": "NS.Buyer.AGW",
+      "ColorIndex": 10
+    },
+    "d8b49ac2-277f-43f1-91ab-9ffb10f1f0b8": {
+      "ProjectGuid": "d8b49ac2-277f-43f1-91ab-9ffb10f1f0b8",
+      "DisplayName": "NS.Order.API",
+      "ColorIndex": 11
+    },
+    "8602600a-c92b-4523-ab09-6199d548f8dd": {
+      "ProjectGuid": "8602600a-c92b-4523-ab09-6199d548f8dd",
+      "DisplayName": "NS.Purchase.API",
+      "ColorIndex": 12
+    },
+    "f4056a13-8181-4e2b-97dd-bc29c7c91518": {
+      "ProjectGuid": "f4056a13-8181-4e2b-97dd-bc29c7c91518",
+      "DisplayName": "NS.Order.Domain",
+      "ColorIndex": 13
+    },
+    "f290842f-9083-4f23-9bb2-84a14800b39b": {
+      "ProjectGuid": "f290842f-9083-4f23-9bb2-84a14800b39b",
+      "DisplayName": "NS.Order.Infra",
+      "ColorIndex": 14
+    },
+    "4850e21a-dd7b-4905-a22d-8da5952118e1": {
+      "ProjectGuid": "4850e21a-dd7b-4905-a22d-8da5952118e1",
+      "DisplayName": "NS.Order.Infra",
+      "ColorIndex": 15
+    },
+    "16c4f86c-486f-4d58-8ec3-1d763e97b626": {
+      "ProjectGuid": "16c4f86c-486f-4d58-8ec3-1d763e97b626",
+      "DisplayName": "NS.Order.Domain",
+      "ColorIndex": 0
+    },
+    "a8cf65de-01bd-4405-8b04-354e0269f98f": {
+      "ProjectGuid": "a8cf65de-01bd-4405-8b04-354e0269f98f",
+      "DisplayName": "NS.Buyer.AGW",
+      "ColorIndex": 1
+    },
+    "6163e340-7bac-47b0-b688-0b3436e36ecc": {
+      "ProjectGuid": "6163e340-7bac-47b0-b688-0b3436e36ecc",
+      "DisplayName": "NS.Purchase.NPay",
+      "ColorIndex": 2
+    },
+    "2f41f69f-8f7a-4ccc-9dad-98edb52f5978": {
+      "ProjectGuid": "2f41f69f-8f7a-4ccc-9dad-98edb52f5978",
+      "DisplayName": "Purchase",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 9
+  "NextColorIndex": 4
 }

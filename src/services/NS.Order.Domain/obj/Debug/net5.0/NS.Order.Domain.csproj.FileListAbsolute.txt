@@ -1,0 +1,15 @@
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.csproj.AssemblyReference.cache
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.AssemblyInfoInputs.cache
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.AssemblyInfo.cs
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.csproj.CoreCompileInputs.cache
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\bin\Debug\net5.0\NS.Order.Domain.deps.json
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\bin\Debug\net5.0\NS.Order.Domain.dll
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\bin\Debug\net5.0\ref\NS.Order.Domain.dll
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\bin\Debug\net5.0\NS.Order.Domain.pdb
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\bin\Debug\net5.0\NS.Core.dll
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\bin\Debug\net5.0\NS.Core.pdb
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.csproj.CopyComplete
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.dll
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\ref\NS.Order.Domain.dll
+D:\Projetos\NerdStore\src\services\NS.Order.Domain\obj\Debug\net5.0\NS.Order.Domain.pdb

@@ -27,10 +27,16 @@ namespace NS.Catalog.API.Controllers
         }
 
         [ClaimsAuthorize("Catalog", "Read")]
-        [HttpGet("catalogo/products/{id}")]
+        [HttpGet("catalog/products/{id}")]
         public async Task<Product> ProductDetails(Guid id)
         {
             return await _productRepository.GetById(id);
+        }
+
+        [HttpGet("catalog/products/list/{ids}")]
+        public async Task<IEnumerable<Product>> GetProductsById(string ids)
+        {
+            return await _productRepository.GetProductsById(ids);
         }
     }
 }

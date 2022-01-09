@@ -4,17 +4,15 @@ using NS.Core.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using NS.Core.Mediator;
-using NS.Core.DomainObjects;
 using FluentValidation.Results;
 using NS.Core.Messages;
+using NS.Core.DomainObjects;
 
 namespace NS.Customer.API.Data
 {
     public class CustomerContext : DbContext, IUnitOfWork
     {
         private readonly IMediatorHandler _mediatorHandler;
-
-
 
         public CustomerContext(DbContextOptions<CustomerContext> options, IMediatorHandler mediatorHandler)
             : base(options)
@@ -24,7 +22,7 @@ namespace NS.Customer.API.Data
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-        public DbSet<CustomerPerson> Customers { get; set; }
+        public DbSet<Models.Customer> Customers { get; set; }
         public DbSet<Address> Addresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

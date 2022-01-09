@@ -10,3 +10,6 @@ D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.Web
 D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.dll
 D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\ref\NS.WebAPI.Core.dll
 D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.pdb
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\bin\Debug\net5.0\NS.Core.dll
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\bin\Debug\net5.0\NS.Core.pdb
+D:\Projetos\NerdStore\src\building blocks\NS.WebAPI.Core\obj\Debug\net5.0\NS.WebAPI.Core.csproj.CopyComplete

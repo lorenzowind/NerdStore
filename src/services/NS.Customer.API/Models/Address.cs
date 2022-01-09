@@ -14,9 +14,10 @@ namespace NS.Customer.API.Models
         public string State { get; private set; }
         public Guid CustomerId { get; private set; }
 
-        public CustomerPerson Customer { get; protected set; }
+        public Customer Customer { get; protected set; }
 
-        public Address(string publicArea, string number, string complement, string district, string zipCode, string city, string state)
+        public Address(string publicArea, string number, string complement, 
+            string district, string zipCode, string city, string state, Guid customerId)
         {
             PublicArea = publicArea;
             Number = number;
@@ -25,6 +26,7 @@ namespace NS.Customer.API.Models
             ZipCode = zipCode;
             City = city;
             State = state;
+            CustomerId = customerId;
         }
     }
 }

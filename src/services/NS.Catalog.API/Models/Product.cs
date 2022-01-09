@@ -12,5 +12,16 @@ namespace NS.Catalog.API.Models
         public DateTime RegistrationDate { get; set; }
         public string Image { get; set; }
         public int StorageQuantity { get; set; }
+
+        public void DecreaseStorage(int quantity)
+        {
+            if (StorageQuantity >= quantity)
+                StorageQuantity -= quantity;
+        }
+
+        public bool IsAvailable(int quantity)
+        {
+            return Active && StorageQuantity >= quantity;
+        }
     }
 }

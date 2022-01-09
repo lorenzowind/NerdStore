@@ -291,3 +291,9 @@ D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Polly.dll
 D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\NS.MessageBus.dll
 D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\NS.MessageBus.pdb
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.Http.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.Http.Polly.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.Logging.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\Projetos\NerdStore\src\services\NS.Customer.API\bin\Debug\net5.0\Polly.Extensions.Http.dll

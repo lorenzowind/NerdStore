@@ -5,9 +5,9 @@ using NS.Customer.API.Models;
 
 namespace NS.Customer.API.Data.Mappings
 {
-    public class CustomerMapping : IEntityTypeConfiguration<CustomerPerson>
+    public class CustomerMapping : IEntityTypeConfiguration<Models.Customer>
     {
-        public void Configure(EntityTypeBuilder<CustomerPerson> builder)
+        public void Configure(EntityTypeBuilder<Models.Customer> builder)
         {
             builder.HasKey(c => c.Id);
 

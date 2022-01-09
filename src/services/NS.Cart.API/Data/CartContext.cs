@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using NS.Cart.API.Model;
+using NS.Cart.API.Models;
 using System.Linq;
 
 namespace NS.Cart.API.Data
@@ -34,13 +34,31 @@ namespace NS.Cart.API.Data
                 .HasDatabaseName("IDX_Customer");
 
             modelBuilder.Entity<CustomerCart>()
+                .Ignore(c => c.Voucher)
+                .OwnsOne(c => c.Voucher, v =>
+                {
+                    v.Property(vc => vc.Code)
+                        .HasColumnName("VoucherCode")
+                        .HasColumnType("varchar(50)");
+
+                    v.Property(vc => vc.DiscountType)
+                        .HasColumnName("DiscountType");
+
+                    v.Property(vc => vc.Percentage)
+                        .HasColumnName("Percentage");
+
+                    v.Property(vc => vc.DiscountValue)
+                        .HasColumnName("DiscountValue");
+                });
+
+            modelBuilder.Entity<CustomerCart>()
                 .HasMany(c => c.Itens)
                 .WithOne(i => i.CustomerCart)
                 .HasForeignKey(c => c.CartId);
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {
-                relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+                relationship.DeleteBehavior = DeleteBehavior.Cascade;
             }
         }
     }

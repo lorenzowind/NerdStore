@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using NS.Core.Protocols;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -44,6 +45,25 @@ namespace NS.WebAPI.Core.Controllers
             }
 
             return CustomResponse();
+        }
+
+        protected ActionResult CustomResponse(ResponseResult response)
+        {
+            HasResponseErrors(response);
+
+            return CustomResponse();
+        }
+
+        protected bool HasResponseErrors(ResponseResult response)
+        {
+            if (response == null || !response.Errors.Messages.Any()) return false;
+
+            foreach (var message in response.Errors.Messages)
+            {
+                AddProcessingError(message);
+            }
+
+            return true;
         }
 
         protected bool IsValidOperation() => !Errors.Any();

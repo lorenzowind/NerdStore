@@ -36,6 +36,8 @@ namespace NS.Cart.API
 
             services.AddSwaggerConfiguration();
 
+            services.AddMessageBusConfiguration(Configuration);
+
             services.RegisterServices();
         }
 

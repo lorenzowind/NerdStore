@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "F2cjU5AfmIPsIzKwhjd+rm/hYoSk/TxNUhbs4XI2nbjIq3cPpk2W8tOhIBApE+ug8jFcILMmf9/x6g7oGCVjMg==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\NerdStore\\src\\services\\NS.Order.Domain\\NS.Order.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Lorenzo Windmoller\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

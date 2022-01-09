@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NS.Cart.API.Data;
-using NS.Cart.API.Model;
+using NS.Cart.API.Models;
 using NS.WebAPI.Core.Controllers;
 using NS.WebAPI.Core.User;
 using System;
@@ -81,6 +81,20 @@ namespace NS.Cart.API.Controllers
             cart.RemoveItem(cartItem);
 
             _context.CartItens.Remove(cartItem);
+            _context.CustomerCarts.Update(cart);
+
+            await PersistData();
+            return CustomResponse();
+        }
+
+        [HttpPost]
+        [Route("cart/apply-voucher")]
+        public async Task<IActionResult> ApplyVoucher(Voucher voucher)
+        {
+            var cart = await GetCustomerCart();
+
+            cart.ApplyVoucher(voucher);
+
             _context.CustomerCarts.Update(cart);
 
             await PersistData();

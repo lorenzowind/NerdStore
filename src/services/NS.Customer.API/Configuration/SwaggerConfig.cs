@@ -52,7 +52,7 @@ namespace NS.Customer.API.Configuration
         public static void UseSwaggerConfiguration(this IApplicationBuilder app)
         {
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NS.Catalog.API v1"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NS.Customer.API v1"));
         }
     }
 }

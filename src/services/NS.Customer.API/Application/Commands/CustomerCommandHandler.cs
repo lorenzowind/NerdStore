@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace NS.Customer.API.Application.Commands
 {
-    public class CustomerCommandHandler : CommandHandler, IRequestHandler<RegisterCustomerCommand, ValidationResult>
+    public class CustomerCommandHandler : CommandHandler, 
+        IRequestHandler<RegisterCustomerCommand, ValidationResult>,
+        IRequestHandler<AddAddressCommand, ValidationResult>
     {
         private readonly ICustomerRepository _customerRepository;
 
@@ -21,7 +23,7 @@ namespace NS.Customer.API.Application.Commands
         {
             if (!message.IsValid()) return message.ValidationResult;
 
-            var customer = new CustomerPerson(message.Id, message.Name, message.Email, message.Cpf);
+            var customer = new Models.Customer(message.Id, message.Name, message.Email, message.Cpf);
 
             var existingCustomer = await _customerRepository.GetByCpf(customer.Cpf.Number);
 
@@ -35,6 +37,18 @@ namespace NS.Customer.API.Application.Commands
             _customerRepository.Add(customer);
 
             customer.AddEvent(new RegisteredCustomerEvent(message.Id, message.Name, message.Email, message.Cpf));
+
+            return await PersistData(_customerRepository.UnitOfWork);
+        }
+
+        public async Task<ValidationResult> Handle(AddAddressCommand message, CancellationToken cancellationToken)
+        {
+            if (!message.IsValid()) return message.ValidationResult;
+
+            var address = new Address(message.PublicArea, message.Number, message.Complement,
+                message.District, message.ZipCode, message.City, message.State, message.CustomerId);
+
+            _customerRepository.AddAddress(address);
 
             return await PersistData(_customerRepository.UnitOfWork);
         }
