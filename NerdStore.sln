@@ -55,7 +55,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Order.Domain", "src\serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Order.Infra", "src\services\NS.Order.Infra\NS.Order.Infra.csproj", "{4850E21A-DD7B-4905-A22D-8DA5952118E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.Purchase.NPay", "src\services\NS.Purchase.NPay\NS.Purchase.NPay.csproj", "{6163E340-7BAC-47B0-B688-0B3436E36ECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Purchase.NPay", "src\services\NS.Purchase.NPay\NS.Purchase.NPay.csproj", "{6163E340-7BAC-47B0-B688-0B3436E36ECC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,10 +7,14 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["NS.Buyer.AGW/NS.Buyer.AGW.csproj", "NS.Buyer.AGW/"]
-RUN dotnet restore "NS.Buyer.AGW/NS.Buyer.AGW.csproj"
+COPY ["./api gateways/NS.Buyer.AGW/NS.Buyer.AGW.csproj", "api gateways/NS.Buyer.AGW/"]
+COPY ["./building blocks/NS.Core/NS.Core.csproj", "building blocks/NS.Core/"]
+COPY ["./building blocks/NS.MessageBus/NS.MessageBus.csproj", "building blocks/NS.MessageBus/"]
+COPY ["./building blocks/NS.WebAPI.Core/NS.WebAPI.Core.csproj", "building blocks/NS.WebAPI.Core/"]
+
+RUN dotnet restore "api gateways/NS.Buyer.AGW/NS.Buyer.AGW.csproj"
 COPY . .
-WORKDIR "/src/NS.Buyer.AGW"
+WORKDIR "api gateways/NS.Buyer.AGW"
 RUN dotnet build "NS.Buyer.AGW.csproj" -c Release -o /app/build
 
 FROM build AS publish

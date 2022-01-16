@@ -1,0 +1,162 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: ns-rabbit
+    environment:
+      RABBITMQ_DEFAULT_USER: "nerdstore"
+      RABBITMQ_DEFAULT_PASS: "nerdstore"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  
+  api-identity:
+    image: ns-identity-api:latest
+    container_name: ns-identity-api
+    build:
+      context: ../src
+      dockerfile: ./services/NS.Identity.API/Dockerfile
+    ports:
+      - "5101:5101"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:5101;http://+5102
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=nerdstore
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/nerdstore-certificate.pfx
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - rabbitmq
+  
+  api-cart:
+    image: ns-cart-api:latest
+    container_name: ns-cart-api
+    build:
+      context: ../src
+      dockerfile: ./services/NS.Cart.API/Dockerfile
+    ports:
+      - "5201:5201"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:5201;http://+5202
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=nerdstore
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/nerdstore-certificate.pfx
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - rabbitmq
+      - api-identity
+  
+  api-catalog:
+    image: ns-catalog-api:latest
+    container_name: ns-catalog-api
+    build:
+      context: ../src
+      dockerfile: ./services/NS.Catalog.API/Dockerfile
+    ports:
+      - "5301:5301"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:5301;http://+5302
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=nerdstore
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/nerdstore-certificate.pfx
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - rabbitmq
+  
+  api-customer:
+    image: ns-customer-api:latest
+    container_name: ns-customer-api
+    build:
+      context: ../src
+      dockerfile: ./services/NS.Customer.API/Dockerfile
+    ports:
+      - "5401:5401"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:5401;http://+5402
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=nerdstore
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/nerdstore-certificate.pfx
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - rabbitmq
+      - api-identity
+
+  agw-buyer:
+    image: ns-buyer-agw:latest
+    container_name: ns-buyer-agw
+    build:
+      context: ../src
+      dockerfile: ./api gateways/NS.Buyer.AGW/Dockerfile
+    ports:
+      - "5501:5501"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:5501;http://+5502
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=nerdstore
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/nerdstore-certificate.pfx
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - rabbitmq
+      - api-identity
+      - api-cart
+      - api-purchase
+      - api-order
+  
+  api-purchase:
+    image: ns-purchase-api:latest
+    container_name: ns-purchase-api
+    build:
+      context: ../src
+      dockerfile: ./services/NS.Purchase.API/Dockerfile
+    ports:
+      - "5601:5601"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:5601;http://+5602
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=nerdstore
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/nerdstore-certificate.pfx
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - rabbitmq
+      - api-identity
+      - api-order
+      
+  api-order:
+    image: ns-order-api:latest
+    container_name: ns-order-api
+    build:
+      context: ../src
+      dockerfile: ./services/NS.Order.API/Dockerfile
+    ports:
+      - "5701:5701"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:5701;http://+5702
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=nerdstore
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/nerdstore-certificate.pfx
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - rabbitmq
+      - api-identity
+      
+  #ns-nginx:
+  #  image: ns-nginx:latest
+  #  container_name: ns-nginx
+  #  build:
+  #    context: ./
+  #    dockerfile: ./nginx/Dockerfile
+  #  ports:
+  #    - "80:80"
+  #    - "443:443"
+
+networks:
+  default:
+    driver: bridge
+    name: ns-network

@@ -7,10 +7,14 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/services/NS.Catalog.API/NS.Catalog.API.csproj", "src/services/NS.Catalog.API/"]
-RUN dotnet restore "src/services/NS.Catalog.API/NS.Catalog.API.csproj"
+COPY ["./services/NS.Catalog.API/NS.Catalog.API.csproj", "services/NS.Catalog.API/"]
+COPY ["./building blocks/NS.Core/NS.Core.csproj", "building blocks/NS.Core/"]
+COPY ["./building blocks/NS.MessageBus/NS.MessageBus.csproj", "building blocks/NS.MessageBus/"]
+COPY ["./building blocks/NS.WebAPI.Core/NS.WebAPI.Core.csproj", "building blocks/NS.WebAPI.Core/"]
+
+RUN dotnet restore "services/NS.Catalog.API/NS.Catalog.API.csproj"
 COPY . .
-WORKDIR "/src/src/services/NS.Catalog.API"
+WORKDIR "services/NS.Catalog.API"
 RUN dotnet build "NS.Catalog.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

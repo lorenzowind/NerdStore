@@ -1527,6 +1527,7 @@
         "dependencies": {
           "FluentValidation": "10.3.6",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13",
+          "Microsoft.EntityFrameworkCore": "5.0.13",
           "Microsoft.Extensions.Http.Polly": "6.0.1",
           "NS.Core": "1.0.0"
         },

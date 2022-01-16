@@ -7,10 +7,13 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/services/NS.Cart.API/NS.Cart.API.csproj", "src/services/NS.Cart.API/"]
-RUN dotnet restore "src/services/NS.Cart.API/NS.Cart.API.csproj"
+COPY ["./services/NS.Cart.API/NS.Cart.API.csproj", "services/NS.Cart.API/"]
+COPY ["./building blocks/NS.MessageBus/NS.MessageBus.csproj", "building blocks/NS.MessageBus/"]
+COPY ["./building blocks/NS.WebAPI.Core/NS.WebAPI.Core.csproj", "building blocks/NS.WebAPI.Core/"]
+
+RUN dotnet restore "services/NS.Cart.API/NS.Cart.API.csproj"
 COPY . .
-WORKDIR "/src/src/services/NS.Cart.API"
+WORKDIR "services/NS.Cart.API"
 RUN dotnet build "NS.Cart.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NS.Buyer.AGW.Models;
 using NS.Buyer.AGW.Services;
+using NS.Buyer.AGW.Services.gRPC;
 using NS.WebAPI.Core.Controllers;
 using System;
 using System.Linq;
@@ -13,12 +14,15 @@ namespace NS.Buyer.AGW.Controllers
     public class CartController : MainController
     {
         private readonly ICartService _cartService;
+        private readonly ICartGrpcService _cartGrpcService;
         private readonly ICatalogService _catalogService;
         private readonly IOrderService _orderService;
 
-        public CartController(ICartService cartService, ICatalogService catalogService, IOrderService orderService)
+        public CartController(ICartService cartService, ICartGrpcService cartGrpcService, 
+            ICatalogService catalogService, IOrderService orderService)
         {
             _cartService = cartService;
+            _cartGrpcService = cartGrpcService;
             _catalogService = catalogService;
             _orderService = orderService;
         }

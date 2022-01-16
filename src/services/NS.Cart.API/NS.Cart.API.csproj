@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.41.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
@@ -24,7 +25,9 @@
     <ProjectReference Include="..\..\building blocks\NS.MessageBus\NS.MessageBus.csproj" />
     <ProjectReference Include="..\..\building blocks\NS.WebAPI.Core\NS.WebAPI.Core.csproj" />
   </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+    
+  <ItemGroup>
+	<Protobuf Include="Protos/cart.proto" GrpcServices="Server" />
+  </ItemGroup>
 
 </Project>

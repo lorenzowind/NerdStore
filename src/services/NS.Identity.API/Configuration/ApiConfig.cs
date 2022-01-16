@@ -2,7 +2,10 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NS.Identity.API.Services;
 using NS.WebAPI.Core.Identity;
+using NS.WebAPI.Core.Identity.Security;
+using NS.WebAPI.Core.User;
 
 namespace NS.Identity.API.Configuration
 {
@@ -11,6 +14,9 @@ namespace NS.Identity.API.Configuration
         public static IServiceCollection AddApiConfiguration(this IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddScoped<AuthenticationService>();
+            services.AddScoped<IAspNetUser, AspNetUser>();
 
             return services;
         }
@@ -32,6 +38,8 @@ namespace NS.Identity.API.Configuration
             {
                 endpoints.MapControllers();
             });
+
+            app.UseJwksDiscovery();
 
             return app;
         }

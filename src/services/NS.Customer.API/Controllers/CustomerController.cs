@@ -4,7 +4,6 @@ using NS.Customer.API.Application.Commands;
 using NS.Customer.API.Models;
 using NS.WebAPI.Core.Controllers;
 using NS.WebAPI.Core.User;
-using System;
 using System.Threading.Tasks;
 
 namespace NS.Customer.API.Controllers

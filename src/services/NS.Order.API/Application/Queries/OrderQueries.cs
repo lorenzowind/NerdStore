@@ -74,7 +74,7 @@ namespace NS.Order.API.Application.Queries
 
                     return p;
 
-                }, splitOn: "OrderId,OrderItemDTO");
+                }, splitOn: "OrderId,OrderItemId");
 
             return order.FirstOrDefault();
             //return lookup.Values.OrderBy(p => p.Date).FirstOrDefault();
@@ -82,6 +82,8 @@ namespace NS.Order.API.Application.Queries
 
         private OrderDTO MapOrder(dynamic result)
         {
+            if (result.Count == 0) return null;
+
             var order = new OrderDTO
             {
                 Code = result[0].CODE,

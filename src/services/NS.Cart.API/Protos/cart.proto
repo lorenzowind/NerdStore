@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "NS.Cart.API.Services.gRPC";
+
+package CartAPI;
+
+service BuyerCart {
+	rpc GetCart(GetCartRequest) returns (CustomerCartResponse) {}	
+}
+
+message GetCartRequest {
+
+}
+
+message CustomerCartResponse {
+	string id = 1;
+	string customerid  = 2;
+	double totalprice = 3;
+	repeated CartItemResponse itens = 4;
+	bool appliedvoucher = 5;
+	double discount = 6;
+	VoucherResponse voucher = 7;
+}
+
+message CartItemResponse {
+	string id = 1;
+	string productid = 2;
+	string name  = 3;
+	int32 quantity = 4;
+	double price  = 5;
+	string image  = 6;
+}
+
+message VoucherResponse {
+	double percentage = 1;
+	double discountvalue = 2;
+	string code = 3;
+	int32 discountype = 4;
+}

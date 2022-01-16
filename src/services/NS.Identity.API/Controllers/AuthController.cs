@@ -1,40 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using NS.Core.Messages.Integration;
 using NS.Identity.API.Models;
+using NS.Identity.API.Services;
 using NS.MessageBus;
 using NS.WebAPI.Core.Controllers;
-using NS.WebAPI.Core.Identity;
 
 namespace NS.Identity.API.Controllers
 {
     [Route("api/identity")]
     public class AuthController : MainController
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly AppSettings _appSettings;
-
+        private readonly AuthenticationService _authenticationService;
         private readonly IMessageBus _bus;
 
-        public AuthController(
-            SignInManager<IdentityUser> signInManager,
-            UserManager<IdentityUser> userManager,
-            IOptions<AppSettings> appSettings,
-            IMessageBus bus
-        ) {
-            _signInManager = signInManager;
-            _userManager = userManager;
-            _appSettings = appSettings.Value;
+        public AuthController(AuthenticationService authenticationService, IMessageBus bus)
+        {
+            _authenticationService = authenticationService;
             _bus = bus;
         }
 
@@ -50,7 +34,7 @@ namespace NS.Identity.API.Controllers
                 EmailConfirmed = true
             };
 
-            var result = await _userManager.CreateAsync(user, userRegistration.Password);
+            var result = await _authenticationService.UserManager.CreateAsync(user, userRegistration.Password);
 
             if (result.Succeeded)
             {
@@ -58,11 +42,11 @@ namespace NS.Identity.API.Controllers
 
                 if (!customerResult.ValidationResult.IsValid)
                 {
-                    await _userManager.DeleteAsync(user);
+                    await _authenticationService.UserManager.DeleteAsync(user);
                     return CustomResponse(customerResult.ValidationResult);
                 }
 
-                return CustomResponse(await GenerateJwt(user.Email));
+                return CustomResponse(await _authenticationService.GenerateJwt(user.Email));
             }
 
             foreach (var error in result.Errors)
@@ -78,7 +62,7 @@ namespace NS.Identity.API.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var result = await _signInManager.PasswordSignInAsync(
+            var result = await _authenticationService.SignInManager.PasswordSignInAsync(
                 userLogin.Email, 
                 userLogin.Password, 
                 false, 
@@ -87,7 +71,7 @@ namespace NS.Identity.API.Controllers
 
             if (result.Succeeded)
             {
-                return CustomResponse(await GenerateJwt(userLogin.Email));
+                return CustomResponse(await _authenticationService.GenerateJwt(userLogin.Email));
             }
 
             if (result.IsLockedOut)
@@ -100,81 +84,9 @@ namespace NS.Identity.API.Controllers
             return CustomResponse();
         }
 
-        #region Jwt Generation
-
-        private async Task<UserLoginResponse> GenerateJwt(string email)
-        {
-            var user = await _userManager.FindByEmailAsync(email);
-            var claims = await _userManager.GetClaimsAsync(user);
-
-            var claimsIdentity = await GetUserClaims(claims, user);
-            var encodedToken = CodeToken(claimsIdentity);
-
-            return GetTokenResponse(encodedToken, user, claims);
-        }
-
-        private async Task<ClaimsIdentity> GetUserClaims(ICollection<Claim> claims, IdentityUser user)
-        {
-            var userRoles = await _userManager.GetRolesAsync(user);
-
-            claims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Id));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Nbf, ToUnixEpochDate(DateTime.UtcNow).ToString()));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(DateTime.UtcNow).ToString(), ClaimValueTypes.Integer64));
-
-            foreach (var userRole in userRoles)
-            {
-                claims.Add(new Claim("role", userRole));
-            }
-
-            var claimsIdentity = new ClaimsIdentity();
-            claimsIdentity.AddClaims(claims);
-
-            return claimsIdentity;
-        }
-
-        private string CodeToken(ClaimsIdentity claimsIdentity)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-
-            var token = tokenHandler.CreateToken(new SecurityTokenDescriptor
-            {
-                Issuer = _appSettings.Issuer,
-                Audience = _appSettings.ValidAt,
-                Subject = claimsIdentity,
-                Expires = DateTime.UtcNow.AddHours(_appSettings.HoursExpiration),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            });
-
-            return tokenHandler.WriteToken(token);
-        }
-
-        private UserLoginResponse GetTokenResponse(string encodedToken, IdentityUser user, IEnumerable<Claim> claims)
-        {
-            var response = new UserLoginResponse
-            {
-                AccessToken = encodedToken,
-                ExpiresIn = TimeSpan.FromHours(_appSettings.HoursExpiration).TotalSeconds,
-                UserToken = new UserToken
-                {
-                    Id = user.Id,
-                    Email = user.Email,
-                    Claims = claims.Select(c => new UserClaim { Type = c.Type, Value = c.Value })
-                }
-            };
-
-            return response;
-        }
-
-        private static long ToUnixEpochDate(DateTime date) => (long) Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds);
-
-        #endregion
-
         private async Task<ResponseMessage> RegisterCustomer(UserRegistration userRegistration)
         {
-            var user = await _userManager.FindByEmailAsync(userRegistration.Email);
+            var user = await _authenticationService.UserManager.FindByEmailAsync(userRegistration.Email);
 
             var registeredUser =
                 new RegisteredUserIntegrationEvent(Guid.Parse(user.Id), userRegistration.Name, userRegistration.Email, userRegistration.Cpf);
@@ -185,9 +97,29 @@ namespace NS.Identity.API.Controllers
             }
             catch
             {
-                await _userManager.DeleteAsync(user);
+                await _authenticationService.UserManager.DeleteAsync(user);
                 throw;
             }
+        }
+
+        [HttpPost("refresh-token")]
+        public async Task<ActionResult> HandleRefreshToken([FromBody] string refreshToken)
+        {
+            if (string.IsNullOrEmpty(refreshToken))
+            {
+                AddProcessingError("Invalid refresh token");
+                return CustomResponse();
+            }
+
+            var token = await _authenticationService.GetRefreshToken(Guid.Parse(refreshToken));
+
+            if (token is null)
+            {
+                AddProcessingError("Expired refresh token");
+                return CustomResponse();
+            }
+
+            return CustomResponse(await _authenticationService.GenerateJwt(token.Username));
         }
     }
 }

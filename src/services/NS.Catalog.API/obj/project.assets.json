@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Dapper/2.0.123": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {}
+        }
+      },
       "EasyNetQ/6.3.1": {
         "type": "package",
         "dependencies": {
@@ -1686,6 +1695,7 @@
         "dependencies": {
           "FluentValidation": "10.3.6",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13",
+          "Microsoft.EntityFrameworkCore": "5.0.13",
           "Microsoft.Extensions.Http.Polly": "6.0.1",
           "NS.Core": "1.0.0"
         },
@@ -1699,6 +1709,24 @@
     }
   },
   "libraries": {
+    "Dapper/2.0.123": {
+      "sha512": "RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "type": "package",
+      "path": "dapper/2.0.123",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.0.123.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
     "EasyNetQ/6.3.1": {
       "sha512": "WBZxeGj5ivoCA12rnAy4hG12i8FS9mYi9o91+48fJ9Ei2+EOPsZ/6Y+C4z8Q0Rh9dgxC8rsZ2fW1qVd9yGlEUA==",
       "type": "package",
@@ -6142,6 +6170,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Dapper >= 2.0.123",
       "Microsoft.EntityFrameworkCore >= 5.0.13",
       "Microsoft.EntityFrameworkCore.Abstractions >= 5.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.13",
@@ -6207,6 +6236,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.0.123, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.13, )"

@@ -70,6 +70,6 @@ namespace NS.Core.DomainObjects
             return $"{GetType().Name} [Id={Id}]";
         }
 
-        #endregion
+        #endregion Comparation
     }
 }

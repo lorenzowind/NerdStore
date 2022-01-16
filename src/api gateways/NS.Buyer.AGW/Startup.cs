@@ -39,6 +39,8 @@ namespace NS.Buyer.AGW
             services.RegisterServices();
 
             services.AddMessageBusConfiguration(Configuration);
+
+            services.ConfigureGrpcServices(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

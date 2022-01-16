@@ -1,0 +1,2 @@
+obj\Debug\net5.0/Cart.cs \
+obj\Debug\net5.0/CartGrpc.cs: ../../services/NS.Cart.API/Protos/cart.proto

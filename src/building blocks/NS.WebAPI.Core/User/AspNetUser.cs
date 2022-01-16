@@ -31,6 +31,11 @@ namespace NS.WebAPI.Core.User
             return IsAuthenticated() ? _accessor.HttpContext.User.GetUserToken() : "";
         }
 
+        public string GetUserRefreshToken()
+        {
+            return IsAuthenticated() ? _accessor.HttpContext.User.GetUserRefreshToken() : "";
+        }
+
         public bool IsAuthenticated()
         {
             return _accessor.HttpContext.User.Identity.IsAuthenticated;

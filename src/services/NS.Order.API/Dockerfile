@@ -7,10 +7,13 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/services/NS.Order.API/NS.Order.API.csproj", "src/services/NS.Order.API/"]
-RUN dotnet restore "src/services/NS.Order.API/NS.Order.API.csproj"
+COPY ["./services/NS.Order.API/NS.Order.API.csproj", "services/NS.Order.API/"]
+COPY ["./building blocks/NS.MessageBus/NS.MessageBus.csproj", "building blocks/NS.MessageBus/"]
+COPY ["./building blocks/NS.WebAPI.Core/NS.WebAPI.Core.csproj", "building blocks/NS.WebAPI.Core/"]
+
+RUN dotnet restore "services/NS.Order.API/NS.Order.API.csproj"
 COPY . .
-WORKDIR "/src/src/services/NS.Order.API"
+WORKDIR "services/NS.Order.API"
 RUN dotnet build "NS.Order.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

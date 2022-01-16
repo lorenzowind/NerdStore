@@ -7,10 +7,14 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/services/NS.Purchase.API/NS.Purchase.API.csproj", "src/services/NS.Purchase.API/"]
-RUN dotnet restore "src/services/NS.Purchase.API/NS.Purchase.API.csproj"
+COPY ["./services/NS.Purchase.API/NS.Purchase.API.csproj", "services/NS.Purchase.API/"]
+COPY ["./building blocks/NS.Core/NS.Core.csproj", "building blocks/NS.Core/"]
+COPY ["./building blocks/NS.MessageBus/NS.MessageBus.csproj", "building blocks/NS.MessageBus/"]
+COPY ["./building blocks/NS.WebAPI.Core/NS.WebAPI.Core.csproj", "building blocks/NS.WebAPI.Core/"]
+
+RUN dotnet restore "services/NS.Purchase.API/NS.Purchase.API.csproj"
 COPY . .
-WORKDIR "/src/src/services/NS.Purchase.API"
+WORKDIR "services/NS.Purchase.API"
 RUN dotnet build "NS.Purchase.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
